@@ -1,0 +1,65 @@
+
+
+.header {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 1.25rem;
+    border-radius: 6px;
+    gap: 0.5rem;
+
+    h5 {
+        display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    }
+}
+
+.button {
+    color: #fff;
+    background: #3B82F6;
+    border: 1px solid #3B82F6;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    transition: background-color .2s,color .2s,border-color .2s,box-shadow .2s;
+    border-radius: 6px;
+}
+
+
+::ng-deep.p-datatable .p-datatable-thead>tr>th {
+    text-align: left !important;
+    border: 1px solid #dee2e6  !important;
+    border-width: 0 0 1px 0  !important;
+    font-weight: 700  !important;
+    color: #343a40  !important;
+    background: #f8f9fa  !important;
+    transition: box-shadow .2s  !important;
+    padding: 0.5rem !important;
+
+}
+
+
+.popup-label {
+    font-family: var(--mdc-dialog-supporting-text-font, Roboto, sans-serif);
+    line-height: var(--mdc-dialog-supporting-text-line-height, 1.5rem);
+    font-size: var(--mdc-dialog-supporting-text-size, 1rem);
+    font-weight: var(--mdc-dialog-supporting-text-weight, 400);
+    letter-spacing: var(--mdc-dialog-supporting-text-tracking, 0.03125em);
+    color: var(--mdc-dialog-supporting-text-color, rgba(0, 0, 0, 0.6));
+}
+
+::ng-deep.p-inputtext {
+    font-family: var(--font-family) !important;
+    font-feature-settings: var(--font-feature-settings, normal) !important;
+    font-size: 1rem !important;
+    color: #495057 !important;
+    background: #ffffff !important;
+    padding: 0.75rem !important;
+    border: 1px solid #ced4da !important;
+    transition: background-color .2s,color .2s,border-color .2s,box-shadow .2s !important;
+    appearance: none !important;
+    border-radius: 6px !important;
+}

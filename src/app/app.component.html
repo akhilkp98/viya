@@ -1,0 +1,55 @@
+<section class="px-2 py-3">
+  <div class="header">
+      <h5>VIYA - MACHINE TEST</h5>
+  </div>
+</section>
+
+<div class="d-flex justify-content-end px-3">
+  <button class="button" (click)="add()"><i class="pi pi-plus" style="font-size: 1rem;"></i> Add</button>
+</div>
+
+<div class="p-3">
+  <p-table [value]="datasource">
+      <ng-template pTemplate="header">
+          <tr>
+              <th>Rank</th>
+              <th>Name</th>
+              <th>Net Points</th>
+              <th></th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-data>
+          <tr>
+              <td>{{ data.rank }}</td>
+              <td>{{ data.name }}</td>
+              <td>{{ data.netPoint }}</td>
+              <td><li class="pi pi-pencil p-1" style="cursor: pointer;color: rgb(0, 153, 255);" (click)="edit(data)"></li>
+                  <li class="pi pi-times p-1" style="cursor: pointer;color: red;" (click)="deleteData(data)"></li></td>
+          </tr>
+      </ng-template>
+  </p-table>
+</div>
+
+
+<p-dialog header="Add/ Edit Details" [(visible)]="visible" [style]="{width: '30vw'}">
+  <form [formGroup]="dataForm">
+    <div></div>
+      <div class="pt-3">
+          <div class="d-flex flex-column">
+              <label htmlFor="name" class="popup-label">Name</label>
+              <input id="name" type="text" pInputText formControlName="name"/>
+          </div>
+          <div class="d-flex flex-column">
+              <label htmlFor="points" class="popup-label">Points</label>
+              <input id="points" type="number" pInputText formControlName="points"/>
+          </div>
+
+          <div class="d-flex justify-content-end px-3 py-3">
+              <button class="button" *ngIf="!editDta" (click)="save()">Save</button>
+              <button class="button" *ngIf="editDta"  (click)="editData()">Update</button>
+          </div>
+      </div>
+  </form>
+</p-dialog>
+
+<p-toast position="top-right"></p-toast>
